@@ -1,0 +1,1515 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta content="width=300, initial-scale=1" name="viewport">
+  <meta name="description" content="Free weblog publishing tool from Google, for sharing text, photos and video.">
+  <meta name="google-site-verification" content="LrdTUW9psUAMbh4Ia074-BPEVmcpBxF6Gwf0MSgQXZs">
+  <title>Blogger</title>
+  <style>
+  @font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(//fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTYnF5uFdDttMLvmWuJdhhgs.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(//fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3aCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+}
+  </style>
+  <style>
+  h1, h2 {
+  -webkit-animation-duration: 0.1s;
+  -webkit-animation-name: fontfix;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-delay: 0;
+  }
+  @-webkit-keyframes fontfix {
+  from {
+  opacity: 1;
+  }
+  to {
+  opacity: 1;
+  }
+  }
+  </style>
+<style>
+  html, body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  position: absolute;
+  height: 100%;
+  min-width: 100%;
+  font-size: 13px;
+  color: #404040;
+  direction: ltr;
+  -webkit-text-size-adjust: none;
+  }
+  button,
+  input[type=button],
+  input[type=submit] {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  }
+  a,
+  a:hover,
+  a:visited {
+  color: #427fed;
+  cursor: pointer;
+  text-decoration: none;
+  }
+  a:hover {
+  text-decoration: underline;
+  }
+  h1 {
+  font-size: 20px;
+  color: #262626;
+  margin: 0 0 15px;
+  font-weight: normal;
+  }
+  h2 {
+  font-size: 14px;
+  color: #262626;
+  margin: 0 0 15px;
+  font-weight: bold;
+  }
+  input[type=email],
+  input[type=number],
+  input[type=password],
+  input[type=tel],
+  input[type=text],
+  input[type=url] {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  display: inline-block;
+  height: 36px;
+  padding: 0 8px;
+  margin: 0;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-top: 1px solid #c0c0c0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+  border-radius: 1px;
+  font-size: 15px;
+  color: #404040;
+  }
+  input[type=email]:hover,
+  input[type=number]:hover,
+  input[type=password]:hover,
+  input[type=tel]:hover,
+  input[type=text]:hover,
+  input[type=url]:hover {
+  border: 1px solid #b9b9b9;
+  border-top: 1px solid #a0a0a0;
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  }
+  input[type=email]:focus,
+  input[type=number]:focus,
+  input[type=password]:focus,
+  input[type=tel]:focus,
+  input[type=text]:focus,
+  input[type=url]:focus {
+  outline: none;
+  border: 1px solid #4d90fe;
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+  }
+  input[type=checkbox],
+  input[type=radio] {
+  -webkit-appearance: none;
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  margin: 0;
+  cursor: pointer;
+  vertical-align: bottom;
+  background: #fff;
+  border: 1px solid #c6c6c6;
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+  border-radius: 1px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  }
+  input[type=checkbox]:active,
+  input[type=radio]:active {
+  background: #ebebeb;
+  }
+  input[type=checkbox]:hover {
+  border-color: #c6c6c6;
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  }
+  input[type=radio] {
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  border-radius: 1em;
+  width: 15px;
+  height: 15px;
+  }
+  input[type=checkbox]:checked,
+  input[type=radio]:checked {
+  background: #fff;
+  }
+  input[type=radio]:checked::after {
+  content: '';
+  display: block;
+  position: relative;
+  top: 3px;
+  left: 3px;
+  width: 7px;
+  height: 7px;
+  background: #666;
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  border-radius: 1em;
+  }
+  input[type=checkbox]:checked::after {
+  content: url(https://ssl.gstatic.com/ui/v1/menu/checkmark.png);
+  display: block;
+  position: absolute;
+  top: -6px;
+  left: -5px;
+  }
+  input[type=checkbox]:focus {
+  outline: none;
+  border-color: #4d90fe;
+  }
+  .stacked-label {
+  display: block;
+  font-weight: bold;
+  margin: .5em 0;
+  }
+  .hidden-label {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 0px;
+  width: 0px;
+  overflow: hidden;
+  visibility: hidden;
+  }
+  input[type=checkbox].form-error,
+  input[type=email].form-error,
+  input[type=number].form-error,
+  input[type=password].form-error,
+  input[type=text].form-error,
+  input[type=tel].form-error,
+  input[type=url].form-error {
+  border: 1px solid #dd4b39;
+  }
+  .error-msg {
+  margin: .5em 0;
+  display: block;
+  color: #dd4b39;
+  line-height: 17px;
+  }
+  .help-link {
+  background: #dd4b39;
+  padding: 0 5px;
+  color: #fff;
+  font-weight: bold;
+  display: inline-block;
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  border-radius: 1em;
+  text-decoration: none;
+  position: relative;
+  top: 0px;
+  }
+  .help-link:visited {
+  color: #fff;
+  }
+  .help-link:hover {
+  color: #fff;
+  background: #c03523;
+  text-decoration: none;
+  }
+  .help-link:active {
+  opacity: 1;
+  background: #ae2817;
+  }
+  .wrapper {
+  position: relative;
+  min-height: 100%;
+  }
+  .content {
+  padding: 0 44px;
+  }
+  .main {
+  padding-bottom: 100px;
+  }
+  /* For modern browsers */
+  .clearfix:before,
+  .clearfix:after {
+  content: "";
+  display: table;
+  }
+  .clearfix:after {
+  clear: both;
+  }
+  /* For IE 6/7 (trigger hasLayout) */
+  .clearfix {
+  zoom:1;
+  }
+  .google-header-bar {
+  height: 71px;
+  border-bottom: 1px solid #e5e5e5;
+  overflow: hidden;
+  }
+  .header .logo {
+  background-image: url(https://ssl.gstatic.com/accounts/ui/logo_1x.png);
+  background-size: 116px 38px;
+  background-repeat: no-repeat;
+  margin: 17px 0 0;
+  float: left;
+  height: 38px;
+  width: 116px;
+  }
+  .header .logo-w {
+  background-image: url(https://ssl.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_112x36dp.png);
+  background-size: 112px 36px;
+  margin: 21px 0 0;
+  }
+  .header .secondary-link {
+  margin: 28px 0 0;
+  float: right;
+  }
+  .header .secondary-link a {
+  font-weight: normal;
+  }
+  .google-header-bar.centered {
+  border: 0;
+  height: 108px;
+  }
+  .google-header-bar.centered .header .logo {
+  float: none;
+  margin: 40px auto 30px;
+  display: block;
+  }
+  .google-header-bar.centered .header .secondary-link {
+  display: none
+  }
+  .google-footer-bar {
+  position: absolute;
+  bottom: 0;
+  height: 35px;
+  width: 100%;
+  border-top: 1px solid #e5e5e5;
+  overflow: hidden;
+  }
+  .footer {
+  padding-top: 7px;
+  font-size: .85em;
+  white-space: nowrap;
+  line-height: 0;
+  }
+  .footer ul {
+  float: left;
+  max-width: 80%;
+  min-height: 16px;
+  padding: 0;
+  }
+  .footer ul li {
+  color: #737373;
+  display: inline;
+  padding: 0;
+  padding-right: 1.5em;
+  }
+  .footer a {
+  color: #737373;
+  }
+  .lang-chooser-wrap {
+  float: right;
+  display: inline;
+  }
+  .lang-chooser-wrap img {
+  vertical-align: top;
+  }
+  .lang-chooser {
+  font-size: 13px;
+  height: 24px;
+  line-height: 24px;
+  }
+  .lang-chooser option {
+  font-size: 13px;
+  line-height: 24px;
+  }
+  .hidden {
+  height: 0px;
+  width: 0px;
+  overflow: hidden;
+  visibility: hidden;
+  display: none !important;
+  }
+  .banner {
+  text-align: center;
+  }
+  .card {
+  background-color: #f7f7f7;
+  padding: 20px 25px 30px;
+  margin: 0 auto 25px;
+  width: 304px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  }
+  .card > *:first-child {
+  margin-top: 0;
+  }
+  .rc-button,
+  .rc-button:visited {
+  display: inline-block;
+  min-width: 46px;
+  text-align: center;
+  color: #444;
+  font-size: 14px;
+  font-weight: 700;
+  height: 36px;
+  padding: 0 8px;
+  line-height: 36px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -o-transition: all 0.218s;
+  -moz-transition: all 0.218s;
+  -webkit-transition: all 0.218s;
+  transition: all 0.218s;
+  border: 1px solid #dcdcdc;
+  background-color: #f5f5f5;
+  background-image: -webkit-linear-gradient(top,#f5f5f5,#f1f1f1);
+  background-image: -moz-linear-gradient(top,#f5f5f5,#f1f1f1);
+  background-image: -ms-linear-gradient(top,#f5f5f5,#f1f1f1);
+  background-image: -o-linear-gradient(top,#f5f5f5,#f1f1f1);
+  background-image: linear-gradient(top,#f5f5f5,#f1f1f1);
+  -o-transition: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  }
+  .card .rc-button {
+  width: 100%;
+  padding: 0;
+  }
+  .rc-button.disabled,
+  .rc-button[disabled] {
+  opacity: .5;
+  filter: alpha(opacity=50);
+  cursor: default;
+  pointer-events: none;
+  }
+  .rc-button:hover {
+  border: 1px solid #c6c6c6;
+  color: #333;
+  text-decoration: none;
+  -o-transition: all 0.0s;
+  -moz-transition: all 0.0s;
+  -webkit-transition: all 0.0s;
+  transition: all 0.0s;
+  background-color: #f8f8f8;
+  background-image: -webkit-linear-gradient(top,#f8f8f8,#f1f1f1);
+  background-image: -moz-linear-gradient(top,#f8f8f8,#f1f1f1);
+  background-image: -ms-linear-gradient(top,#f8f8f8,#f1f1f1);
+  background-image: -o-linear-gradient(top,#f8f8f8,#f1f1f1);
+  background-image: linear-gradient(top,#f8f8f8,#f1f1f1);
+  -moz-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  }
+  .rc-button:active {
+  background-color: #f6f6f6;
+  background-image: -webkit-linear-gradient(top,#f6f6f6,#f1f1f1);
+  background-image: -moz-linear-gradient(top,#f6f6f6,#f1f1f1);
+  background-image: -ms-linear-gradient(top,#f6f6f6,#f1f1f1);
+  background-image: -o-linear-gradient(top,#f6f6f6,#f1f1f1);
+  background-image: linear-gradient(top,#f6f6f6,#f1f1f1);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  }
+  .rc-button-submit,
+  .rc-button-submit:visited {
+  border: 1px solid #3079ed;
+  color: #fff;
+  text-shadow: 0 1px rgba(0,0,0,0.1);
+  background-color: #4d90fe;
+  background-image: -webkit-linear-gradient(top,#4d90fe,#4787ed);
+  background-image: -moz-linear-gradient(top,#4d90fe,#4787ed);
+  background-image: -ms-linear-gradient(top,#4d90fe,#4787ed);
+  background-image: -o-linear-gradient(top,#4d90fe,#4787ed);
+  background-image: linear-gradient(top,#4d90fe,#4787ed);
+  }
+  .rc-button-submit:hover {
+  border: 1px solid #2f5bb7;
+  color: #fff;
+  text-shadow: 0 1px rgba(0,0,0,0.3);
+  background-color: #357ae8;
+  background-image: -webkit-linear-gradient(top,#4d90fe,#357ae8);
+  background-image: -moz-linear-gradient(top,#4d90fe,#357ae8);
+  background-image: -ms-linear-gradient(top,#4d90fe,#357ae8);
+  background-image: -o-linear-gradient(top,#4d90fe,#357ae8);
+  background-image: linear-gradient(top,#4d90fe,#357ae8);
+  }
+  .rc-button-submit:active {
+  background-color: #357ae8;
+  background-image: -webkit-linear-gradient(top,#4d90fe,#357ae8);
+  background-image: -moz-linear-gradient(top,#4d90fe,#357ae8);
+  background-image: -ms-linear-gradient(top,#4d90fe,#357ae8);
+  background-image: -o-linear-gradient(top,#4d90fe,#357ae8);
+  background-image: linear-gradient(top,#4d90fe,#357ae8);
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+  }
+  .rc-button-red,
+  .rc-button-red:visited {
+  border: 1px solid transparent;
+  color: #fff;
+  text-shadow: 0 1px rgba(0,0,0,0.1);
+  background-color: #d14836;
+  background-image: -webkit-linear-gradient(top,#dd4b39,#d14836);
+  background-image: -moz-linear-gradient(top,#dd4b39,#d14836);
+  background-image: -ms-linear-gradient(top,#dd4b39,#d14836);
+  background-image: -o-linear-gradient(top,#dd4b39,#d14836);
+  background-image: linear-gradient(top,#dd4b39,#d14836);
+  }
+  .rc-button-red:hover {
+  border: 1px solid #b0281a;
+  color: #fff;
+  text-shadow: 0 1px rgba(0,0,0,0.3);
+  background-color: #c53727;
+  background-image: -webkit-linear-gradient(top,#dd4b39,#c53727);
+  background-image: -moz-linear-gradient(top,#dd4b39,#c53727);
+  background-image: -ms-linear-gradient(top,#dd4b39,#c53727);
+  background-image: -o-linear-gradient(top,#dd4b39,#c53727);
+  background-image: linear-gradient(top,#dd4b39,#c53727);
+  }
+  .rc-button-red:active {
+  border: 1px solid #992a1b;
+  background-color: #b0281a;
+  background-image: -webkit-linear-gradient(top,#dd4b39,#b0281a);
+  background-image: -moz-linear-gradient(top,#dd4b39,#b0281a);
+  background-image: -ms-linear-gradient(top,#dd4b39,#b0281a);
+  background-image: -o-linear-gradient(top,#dd4b39,#b0281a);
+  background-image: linear-gradient(top,#dd4b39,#b0281a);
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+  }
+  .secondary-actions {
+  text-align: center;
+  }
+</style>
+<style media="screen and (max-width: 800px), screen and (max-height: 800px)">
+  .google-header-bar.centered {
+  height: 83px;
+  }
+  .google-header-bar.centered .header .logo {
+  margin: 25px auto 20px;
+  }
+  .card {
+  margin-bottom: 20px;
+  }
+</style>
+<style media="screen and (max-width: 580px)">
+  html, body {
+  font-size: 14px;
+  }
+  .google-header-bar.centered {
+  height: 73px;
+  }
+  .google-header-bar.centered .header .logo {
+  margin: 20px auto 15px;
+  }
+  .content {
+  padding-left: 10px;
+  padding-right: 10px;
+  }
+  .hidden-small {
+  display: none;
+  }
+  .card {
+  padding: 20px 15px 30px;
+  width: 270px;
+  }
+  .footer ul li {
+  padding-right: 1em;
+  }
+  .lang-chooser-wrap {
+  display: none;
+  }
+</style>
+<style media="screen and (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5)">
+  .header .logo {
+  background-image: url(https://ssl.gstatic.com/accounts/ui/logo_2x.png);
+  }
+  .header .logo-w {
+  background-image: url(https://ssl.gstatic.com/images/branding/googlelogo/2x/googlelogo_color_112x36dp.png);
+  }
+</style>
+<style>
+  pre.debug {
+  font-family: monospace;
+  position: absolute;
+  left: 0;
+  margin: 0;
+  padding: 1.5em;
+  font-size: 13px;
+  background: #f1f1f1;
+  border-top: 1px solid #e5e5e5;
+  direction: ltr;
+  white-space: pre-wrap;
+  width: 90%;
+  overflow: hidden;
+  }
+</style>
+<style>
+  .banner h1 {
+  font-family: 'Open Sans', arial;
+  -webkit-font-smoothing: antialiased;
+  color: #555;
+  font-size: 42px;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 20px;
+  }
+  .banner h2 {
+  font-family: 'Open Sans', arial;
+  -webkit-font-smoothing: antialiased;
+  color: #555;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  }
+  .signin-card {
+  width: 274px;
+  padding: 40px 40px;
+  }
+  .signin-card .profile-img {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 10px;
+  display: block;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  }
+  .signin-card .profile-name {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px 0 0;
+  min-height: 1em;
+  }
+  .signin-card .profile-email {
+  font-size: 16px;
+  text-align: center;
+  margin: 10px 0 20px 0;
+  min-height: 1em;
+  }
+  .signin-card input[type=email],
+  .signin-card input[type=password],
+  .signin-card input[type=text],
+  .signin-card input[type=submit] {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  z-index: 1;
+  position: relative;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  }
+  .signin-card #Email,
+  .signin-card #Passwd,
+  .signin-card .captcha {
+  direction: ltr;
+  height: 44px;
+  font-size: 16px;
+  }
+  .signin-card #Email + .stacked-label {
+  margin-top: 15px;
+  }
+  .signin-card #reauthEmail {
+  display: block;
+  margin-bottom: 10px;
+  line-height: 36px;
+  padding: 0 8px;
+  font-size: 15px;
+  color: #404040;
+  line-height: 2;
+  margin-bottom: 10px;
+  font-size: 14px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  }
+  .one-google p {
+  margin: 0 0 10px;
+  color: #555;
+  font-size: 14px;
+  text-align: center;
+  }
+  .one-google p.create-account,
+  .one-google p.switch-account {
+  margin-bottom: 60px;
+  }
+  .one-google .logo-strip {
+  background-repeat: no-repeat;
+  display: block;
+  margin: 10px auto;
+  background-image: url(https://ssl.gstatic.com/accounts/ui/wlogostrip_230x17_1x.png);
+  background-size: 230px 17px;
+  width: 230px;
+  height: 17px;
+  }
+</style>
+<style media="screen and (max-width: 800px), screen and (max-height: 800px)">
+  .banner h1 {
+  font-size: 38px;
+  margin-bottom: 15px;
+  }
+  .banner h2 {
+  margin-bottom: 15px;
+  }
+  .one-google p.create-account,
+  .one-google p.switch-account {
+  margin-bottom: 30px;
+  }
+  .signin-card #Email {
+  margin-bottom: 0;
+  }
+  .signin-card #Passwd {
+  margin-top: -1px;
+  }
+  .signin-card #Email.form-error,
+  .signin-card #Passwd.form-error {
+  z-index: 2;
+  }
+  .signin-card #Email:hover,
+  .signin-card #Email:focus,
+  .signin-card #Passwd:hover,
+  .signin-card #Passwd:focus {
+  z-index: 3;
+  }
+</style>
+<style media="screen and (max-width: 580px)">
+  .banner h1 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  }
+  .signin-card {
+  width: 260px;
+  padding: 20px 20px;
+  margin: 0 auto 20px;
+  }
+  .signin-card .profile-img {
+  width: 72px;
+  height: 72px;
+  -moz-border-radius: 72px;
+  -webkit-border-radius: 72px;
+  border-radius: 72px;
+  }
+</style>
+<style media="screen and (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5)">
+  .one-google .logo-strip {
+  background-image: url(https://ssl.gstatic.com/accounts/ui/wlogostrip_230x17_2x.png);
+  }
+</style>
+<style>
+  .remember .bubble-wrap {
+  position: absolute;
+  padding-top: 3px;
+  -o-transition: opacity .218s ease-in .218s;
+  -moz-transition: opacity .218s ease-in .218s;
+  -webkit-transition: opacity .218s ease-in .218s;
+  transition: opacity .218s ease-in .218s;
+  left: -999em;
+  opacity: 0;
+  width: 314px;
+  margin-left: -20px;
+  }
+  .remember:hover .bubble-wrap,
+  .remember input:focus ~ .bubble-wrap,
+  .remember .bubble-wrap:hover,
+  .remember .bubble-wrap:focus {
+  opacity: 1;
+  left: inherit;
+  }
+  .bubble-pointer {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #fff;
+  width: 0;
+  height: 0;
+  margin-left: 17px;
+  }
+  .bubble {
+  background-color: #fff;
+  padding: 15px;
+  margin-top: -1px;
+  font-size: 11px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  }
+  #stay-signed-in {
+  float: left;
+  }
+  #stay-signed-in-tooltip {
+  left: auto;
+  margin-left: -20px;
+  padding-top: 3px;
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  width: 314px;
+  z-index: 1;
+  }
+  .dasher-tooltip {
+  top: 380px;
+  }
+</style>
+<style media="screen and (max-width: 800px), screen and (max-height: 800px)">
+  .dasher-tooltip {
+  top: 340px;
+  }
+</style>
+<style>
+  .jfk-tooltip {
+  background-color: #fff;
+  border: 1px solid;
+  color: #737373;
+  font-size: 12px;
+  position: absolute;
+  z-index: 800 !important;
+  border-color: #bbb #bbb #a8a8a8;
+  padding: 16px;
+  width: 250px;
+  }
+ .jfk-tooltip h3 {
+  color: #555;
+  font-size: 12px;
+  margin: 0 0 .5em;
+  }
+ .jfk-tooltip-content p:last-child {
+  margin-bottom: 0;
+  }
+  .jfk-tooltip-arrow {
+  position: absolute;
+  }
+  .jfk-tooltip-arrow .jfk-tooltip-arrowimplbefore,
+  .jfk-tooltip-arrow .jfk-tooltip-arrowimplafter {
+  display: block;
+  height: 0;
+  position: absolute;
+  width: 0;
+  }
+  .jfk-tooltip-arrow .jfk-tooltip-arrowimplbefore {
+  border: 9px solid;
+  }
+  .jfk-tooltip-arrow .jfk-tooltip-arrowimplafter {
+  border: 8px solid;
+  }
+  .jfk-tooltip-arrowdown {
+  bottom: 0;
+  }
+  .jfk-tooltip-arrowup {
+  top: -9px;
+  }
+  .jfk-tooltip-arrowleft {
+  left: -9px;
+  top: 30px;
+  }
+  .jfk-tooltip-arrowright {
+  right: 0;
+  top: 30px;
+  }
+  .jfk-tooltip-arrowdown .jfk-tooltip-arrowimplbefore,.jfk-tooltip-arrowup .jfk-tooltip-arrowimplbefore {
+  border-color: #bbb transparent;
+  left: -9px;
+  }
+  .jfk-tooltip-arrowdown .jfk-tooltip-arrowimplbefore {
+  border-color: #a8a8a8 transparent;
+  }
+  .jfk-tooltip-arrowdown .jfk-tooltip-arrowimplafter,.jfk-tooltip-arrowup .jfk-tooltip-arrowimplafter {
+  border-color: #fff transparent;
+  left: -8px;
+  }
+  .jfk-tooltip-arrowdown .jfk-tooltip-arrowimplbefore {
+  border-bottom-width: 0;
+  }
+  .jfk-tooltip-arrowdown .jfk-tooltip-arrowimplafter {
+  border-bottom-width: 0;
+  }
+  .jfk-tooltip-arrowup .jfk-tooltip-arrowimplbefore {
+  border-top-width: 0;
+  }
+  .jfk-tooltip-arrowup .jfk-tooltip-arrowimplafter {
+  border-top-width: 0;
+  top: 1px;
+  }
+  .jfk-tooltip-arrowleft .jfk-tooltip-arrowimplbefore,
+  .jfk-tooltip-arrowright .jfk-tooltip-arrowimplbefore {
+  border-color: transparent #bbb;
+  top: -9px;
+  }
+  .jfk-tooltip-arrowleft .jfk-tooltip-arrowimplafter,
+  .jfk-tooltip-arrowright .jfk-tooltip-arrowimplafter {
+  border-color:transparent #fff;
+  top:-8px;
+  }
+  .jfk-tooltip-arrowleft .jfk-tooltip-arrowimplbefore {
+  border-left-width: 0;
+  }
+  .jfk-tooltip-arrowleft .jfk-tooltip-arrowimplafter {
+  border-left-width: 0;
+  left: 1px;
+  }
+  .jfk-tooltip-arrowright .jfk-tooltip-arrowimplbefore {
+  border-right-width: 0;
+  }
+  .jfk-tooltip-arrowright .jfk-tooltip-arrowimplafter {
+  border-right-width: 0;
+  }
+  .jfk-tooltip-closebtn {
+  background: url("//ssl.gstatic.com/ui/v1/icons/common/x_8px.png") no-repeat;
+  border: 1px solid transparent;
+  height: 21px;
+  opacity: .4;
+  outline: 0;
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  width: 21px;
+  }
+  .jfk-tooltip-closebtn:focus,
+  .jfk-tooltip-closebtn:hover {
+  opacity: .8;
+  cursor: pointer;
+  }
+  .jfk-tooltip-closebtn:focus {
+  border-color: #4d90fe;
+  }
+</style>
+<style media="screen and (max-width: 580px)">
+  .jfk-tooltip {
+  display: none;
+  }
+</style>
+<style type="text/css">
+.captcha-box {
+  background: #fff;
+  margin: 0 0 10px;
+  overflow: hidden;
+  padding: 10px;
+}
+.captcha-box .captcha-img {
+  text-align: center;
+}
+.captcha-box .captcha-label {
+  font-weight: bold;
+  display: block;
+  margin: .5em 0;
+}
+.captcha-box .captcha-msg {
+  color: #999;
+  display: block;
+  position: relative;
+}
+.captcha-box .captcha-msg .accessibility-logo {
+  float: right;
+  border: 0;
+}
+.captcha-box .audio-box {
+  position: absolute;
+  top: 0;
+}
+</style>
+<style>
+.chromiumsync-custom-content {
+  padding-top: 20px;
+  margin-bottom: 0;
+}
+.form-panel {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  width: 100%;
+}
+.form-panel.first {
+  z-index: 2;
+}
+.form-panel.second {
+  z-index: 1;
+}
+.shift-form .form-panel.first {
+  z-index: 1;
+}
+.shift-form .form-panel.second {
+  z-index: 2;
+}
+.slide-in,
+.slide-out {
+  display: block;
+  -webkit-transition-property: -webkit-transform, opacity;
+  -moz-transition-property: -moz-transform, opacity;
+  -ms-transition-property: -ms-transform, opacity;
+  -o-transition-property: -o-transform, opacity;
+  transition-property: transform, opacity;
+  -webkit-transition-duration: 0.1s;
+  -moz-transition-duration: 0.1s;
+  -ms-transition-duration: 0.1s;
+  -o-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -moz-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -ms-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.slide-out {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.shift-form .slide-out {
+  opacity: 0;
+  -webkit-transform: translate3d(-120%, 0, 0);
+  -moz-transform: translate3d(-120%, 0, 0);
+  -ms-transform: translate3d(-120%, 0, 0);
+  -o-transform: translate3d(-120%, 0, 0);
+  transform: translate3d(-120%, 0, 0);
+}
+.slide-in {
+  -webkit-transform: translate3d(120%, 0, 0);
+  -moz-transform: translate3d(120%, 0, 0);
+  -ms-transform: translate3d(120%, 0, 0);
+  -o-transform: translate3d(120%, 0, 0);
+  transform: translate3d(120%, 0, 0);
+}
+.shift-form .slide-in {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.error-msg {
+  -webkit-transition: max-height 0.3s, opacity 0.3s 0s steps(10, end);
+  -moz-transition: max-height 0.3s, opacity 0.3s 0s steps(10, end);
+  -ms-transition: max-height 0.3s, opacity 0.3s 0s steps(10, end);
+  -o-transition: max-height 0.3s, opacity 0.3s 0s steps(10, end);
+  transition: max-height 0.3s, opacity 0.3s 0s steps(10, end);
+  height: auto;
+  max-height: 0;
+  opacity: 0;
+}
+.has-error .error-msg {
+  max-height: 3.5em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  opacity: 1;
+  visibility: visible;
+}
+.back-arrow {
+  position: absolute;
+  top: 37px;
+  width: 24px;
+  height: 24px;
+  display: none;
+  cursor: pointer;
+}
+.back-arrow {
+  border-style: none;
+}
+.shift-form.back-arrow {
+  display: block;
+}
+.back-arrow img {
+  display: block;
+}
+#link-signup {
+  text-align: center;
+  font-size: 14px;
+}
+.shift-form #link-signup{
+  display: none;
+}
+#link-signin-different {
+  display: none;
+  text-align: center;
+  font-size: 14px;
+}
+.shift-form #link-signin-different {
+  display: block;
+}
+.signin-card #profile-name {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  min-height: 1em;
+}
+.signin-card.no-name #profile-name {
+  display: none;
+}
+.signin-card.no-name #email-display {
+  line-height: initial;
+  margin-bottom: 16px;
+}
+.signin-card #email-display {
+  display: block;
+  padding: 0px 8px;
+  color: rgb(64, 64, 64);
+  line-height: 2;
+  margin-bottom: 10px;
+  font-size: 14px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.signin-card #Email {
+  margin-top: 16px;
+}
+.need-help {
+  float: right;
+  text-align: right;
+}
+.form-panel {
+  width: 274px;
+}
+#gaia_firstform {
+  z-index: 2;
+}
+.signin-card {
+  position: relative;
+  overflow: hidden;
+}
+.signin-card #profile-name {
+  color: #000;
+}
+.circle-mask {
+  display: block;
+  height: 96px;
+  width: 96px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 100;
+  margin-bottom: 10px;
+}
+.circle {
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  -ms-transition-property: -ms-transform;
+  -o-transition-property: -o-transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: cubic-bezier(.645,.045,.355,1);
+  -moz-transition-timing-function: cubic-bezier(.645,.045,.355,1);
+  -ms-transition-timing-function: cubic-bezier(.645,.045,.355,1);
+  -o-transition-timing-function: cubic-bezier(.645,.045,.355,1);
+  transition-timing-function: cubic-bezier(.645,.045,.355,1);
+}
+.circle {
+  position: absolute;
+  z-index: 101;
+  height: 96px;
+  width: 96px;
+  border-radius: 50%;
+  opacity: 0.99;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.main {
+  overflow: hidden;
+}
+.card-mask-wrap {
+  position: relative;
+  width: 360px;
+  margin: 0 auto;
+  z-index: 1;
+}
+.dasher-tooltip {
+  position: absolute;
+  left: 50%;
+  margin-left: 150px;
+}
+.dasher-tooltip .tooltip-pointer {
+  margin-top: 15px;
+}
+.dasher-tooltip p {
+  margin-top: 0;
+}
+.dasher-tooltip p span {
+  display: block;
+}
+.card {
+  margin-bottom: 0;
+}
+.one-google {
+  padding-top: 27px;
+}
+#canvas {
+  -webkit-transition: opacity 0.075s;
+  -moz-transition: opacity 0.075s;
+  -ms-transition: opacity 0.075s;
+  -o-transition: opacity 0.075s;
+  transition: opacity 0.075s;
+  opacity: 0.01;
+}
+.shift-form #canvas {
+  opacity: 0.99;
+}
+.label {
+  color: #404040;
+}
+#account-chooser-link {
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  -ms-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.input-wrapper {
+  position: relative;
+}
+.google-footer-bar {
+  z-index: 2;
+}
+</style>
+<style media="screen and (max-width: 580px)">
+.back-arrow {
+  top: 17px;
+}
+.circle-mask {
+  height: 72px;
+  width: 72px;
+  background-size: 72px;
+}
+.circle {
+  height: 72px;
+  width: 72px;
+}
+#canvas {
+  height: 72px;
+  width: 72px;
+}
+.form-panel {
+  width: 256px;
+}
+.card-mask-wrap {
+  width: 300px;
+}
+.signin-card {
+  width: 256px;
+}
+.signin-card #EmailFirst {
+  margin-top: 15px;
+}
+.one-google {
+  padding-top: 22px;
+}
+</style>
+  </head>
+  <body>
+  <div class="wrapper">
+  <div class="google-header-bar  centered">
+  <div class="header content clearfix">
+  <div class="logo logo-w" aria-label="Google"></div>
+  </div>
+  </div>
+  <div class="main content clearfix">
+<div class="banner">
+<h1>
+  One account. All of Google.
+</h1>
+  <h2 class="hidden-small">
+  Sign in to continue to Blogger
+  </h2>
+</div>
+<div class="main-content 
+  
+  
+    no-name
+  
+  
+  
+">
+<div class="card signin-card
+  
+    pre-shift
+  
+  
+  
+   no-name">
+  <img class="circle-mask"
+      
+        
+          src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png"
+        
+      >
+  <form novalidate method="post" action="https://accounts.google.com/signin/v1/lookup" id="gaia_loginform">
+  <input name="Page" type="hidden" value="PasswordSeparationSignIn">
+  <input type="hidden" name="GALX" value="N-eVSS_VWwc">
+  <input type="hidden" name="gxf" value="AFoagUWIOod2i7lCCqUNCWug8Y1wIvDeCA:1493820812159">
+  <input type="hidden" name="continue" value="https://www.blogger.com/blogger.g?blogID=8749391503645026985">
+  <input type="hidden" name="followup" value="https://www.blogger.com/blogger.g?blogID=8749391503645026985">
+  <input type="hidden" name="service" value="blogger">
+  <input type="hidden" name="ltmpl" value="start">
+  <input id="profile-information" name="ProfileInformation" type="hidden" value="">
+  <input id="session-state" name="SessionState" type="hidden" value="">
+  <input type="hidden" id="_utf8" name="_utf8" value="&#9731;"/>
+  <input type="hidden" name="bgresponse" id="bgresponse" value="js_disabled">
+  <div class="form-panel first valid" id="gaia_firstform">
+  <div class="slide-out ">
+  <div class="input-wrapper focused">
+  <div id="identifier-shown">
+  <div>
+  <label class="hidden-label" for="Email">
+  Enter your email</label>
+  <input id="Email" type="email" value="" spellcheck="false"
+                   name="Email"
+                   
+                     placeholder="Email or phone"
+                   
+                   
+                   
+                   >
+  <input id="Passwd-hidden" type="password" spellcheck="false" class="hidden">
+  </div>
+  </div>
+  <span role="alert" class="error-msg" id="errormsg_0_Email"></span>
+  </div>
+<input id="next" name="signIn" class="rc-button rc-button-submit" type="submit" value="Next">
+  <a class="need-help"
+        href="https://accounts.google.com/signin/usernamerecovery?continue=https%3A%2F%2Fwww.blogger.com%2Fblogger.g%3FblogID%3D8749391503645026985&amp;service=blogger&amp;hl=en">
+  Find my account
+  </a>
+  </div>
+  </div>
+  </form>
+</div>
+  <div class="card-mask-wrap
+    
+        
+     no-name">
+  <div class="card-mask">
+  <div class="one-google">
+  <p class="create-account">
+  <span id="link-signin-different">
+  <a href="https://accounts.google.com/AccountChooser?continue=https%3A%2F%2Fwww.blogger.com%2Fblogger.g%3FblogID%3D8749391503645026985&amp;hl=en&amp;service=blogger">
+  Sign in with a different account
+  </a>
+  </span>
+  <span id="link-signup">
+  <a href="https://accounts.google.com/SignUp?service=blogger&amp;continue=https%3A%2F%2Fwww.blogger.com%2Fblogger.g%3FblogID%3D8749391503645026985&amp;ltmpl=start">
+  Create account
+  </a>
+  </span>
+  </p>
+<p class="tagline">
+  One Google Account for everything Google
+</p>
+<div class="logo-strip"></div>
+  </div>
+  </div>
+  </div>
+</div>
+  </div>
+  <div class="google-footer-bar">
+  <div class="footer content clearfix">
+  <ul id="footer-list">
+  <li>
+  <a href="https://www.google.com/intl/en/about" target="_blank">
+  About Google
+  </a>
+  </li>
+  <li>
+  <a href="https://accounts.google.com/TOS?loc=JP&hl=en&privacy=true" target="_blank">
+  Privacy
+  </a>
+  </li>
+  <li>
+  <a href="https://accounts.google.com/TOS?loc=JP&hl=en" target="_blank">
+  Terms
+  </a>
+  </li>
+  <li>
+  <a href="http://www.google.com/support/accounts?hl=en" target="_blank">
+  Help
+  </a>
+  </li>
+  </ul>
+  </div>
+</div>
+  </div>
+<script type="text/javascript">
+  var gaia_attachEvent = function(element, event, callback) {
+  if (element && element.addEventListener) {
+  element.addEventListener(event, callback, false);
+  } else if (element && element.attachEvent) {
+  element.attachEvent('on' + event, callback);
+  }
+  };
+  (function() {
+  var gaia_hideNavBar = function() {
+  setTimeout(function() {
+  window.scrollTo(0, 1);
+  }, 0);
+  };
+  gaia_attachEvent(window, 'load', gaia_hideNavBar);
+  })();
+</script>
+  <script type="text/javascript">/* Anti-spam. Want to say hello? Contact (base64) Ym90Z3VhcmQtY29udGFjdEBnb29nbGUuY29t */Function('var m=function(D,n,X){if("object"==(n=typeof D,n))if(D){if(D instanceof Array)return"array";if(D instanceof Object)return n;if((X=Object.prototype.toString.call(D),"[object Window]")==X)return"object";if("[object Array]"==X||"number"==typeof D.length&&"undefined"!=typeof D.splice&&"undefined"!=typeof D.propertyIsEnumerable&&!D.propertyIsEnumerable("splice"))return"array";if("[object Function]"==X||"undefined"!=typeof D.call&&"undefined"!=typeof D.propertyIsEnumerable&&!D.propertyIsEnumerable("call"))return"function"}else return"null";else if("function"==n&&"undefined"==typeof D.call)return"object";return n},F=function(D,n,X,l,Z){for(l=X=(n=[],0);l<D.length;l++)Z=D.charCodeAt(l),128>Z?n[X++]=Z:(2048>Z?n[X++]=Z>>6|192:(55296==(Z&64512)&&l+1<D.length&&56320==(D.charCodeAt(l+1)&64512)?(Z=65536+((Z&1023)<<10)+(D.charCodeAt(++l)&1023),n[X++]=Z>>18|240,n[X++]=Z>>12&63|128):n[X++]=Z>>12|224,n[X++]=Z>>6&63|128),n[X++]=Z&63|128);return n},L=this,y=(new function(){},function(D,n,X,l){for(l=n-1,X=[];0<=l;l--)X[n-1-l]=D>>8*l&255;return X}),P=function(D,n,X,l){try{for(l=0;79669387488!=l;)D+=(n<<4^n>>>5)+n^l+X[l&3],l+=2489668359,n+=(D<<4^D>>>5)+D^l+X[l>>>11&3];return[D>>>24,D>>16&255,D>>8&255,D&255,n>>>24,n>>16&255,n>>8&255,n&255]}catch(Z){throw Z;}},p=function(D,n){for(n=[];D--;)n.push(255*Math.random()|0);return n},G=function(D,n){D.S.splice(0,0,n)},h=function(D,n,X,l,Z){if(X=n[0],1==X)D.O=25,D.G(n);else if(2==X){l=n[X=n[1],3];try{D.i=false,Z=D.G(n)}catch(r){O(D,r),Z=D.Z}X&&X(Z),l.push(Z)}else if(3==X)D.G(n);else if(4==X)D.G(n);else if(5==X)D.i=false,n=n[1],n();else if(6==X)return Z=n[2],w(D,213,n[6]),w(D,162,Z),D.G(n)},N=function(D,n,X,l){(((((((((((((l=((((((((((((((((D.v=0,D).J=0,D).P=function(D,n,X){return(n=(X=function(){return D},function(){return X()}),n)[this.B]=function(Z){D=Z},n},D.N=[],D).O=25,D.L=false,D.I=function(D,n,X,l,A,b){return D=((b=(X=(A=function(){return l()},l=function(){return l[X.b+(A[X.f]===n)-!b[X.f]]},this),X.G),A[X.B]=function(D){l[X.h]=D},A)[X.B](D),A)},D.A=[],w(D,31,0),w)(D,95,0),w)(D,97,[165,0,0]),w(D,181,function(D,n,X,l){(l=(n=g(D),X=g(D),g)(D),D.R(n))[D.R(X)]=D.R(l)}),w)(D,219,function(D,n,X,l){n=(n=g(D),X=g(D),l=g(D),X=D.R(X),D.R(n)),w(D,l,n[X])}),w(D,27,function(D,n,X,l,A,b,J){if(!Y(D,1)){if("object"==(A=(l=(X=(X=(n=g(D),g)(D),l=g(D),A=g(D),n=D.R(n),D.R(X)),D.R(l)),D.R(A)),m)(n)){for(J in b=[],n)b.push(J);n=b}for(J=(b=0,n).length;b<J;b+=l)X(n.slice(b,b+l),A);Y(D,0)}}),w)(D,77,function(D,n,X,l){l=(X=(n=g(D),g(D)),g)(D),w(D,l,(D.R(n)in D.R(X))+0)}),w)(D,235,[]),w)(D,4,2048),w)(D,64,function(D,n,X){(X=(n=g(D),g)(D),w)(D,X,""+D.R(n))}),D).c=function(D,n){((n.push(D[0]<<24|D[1]<<16|D[2]<<8|D[3]),n).push(D[4]<<24|D[5]<<16|D[6]<<8|D[7]),n).push(D[8]<<24|D[9]<<16|D[10]<<8|D[11])},w(D,48,function(D){S(D,4)}),w(D,140,L),w)(D,243,function(D,n,X,l,A){X=(A=(X=(n=g(D),g)(D),l=D.R(g(D)),D).R(g(D)),D).R(X),w(D,n,V(D,X,l,A))}),D.i=false,w(D,139,function(D){H(D,4)}),w(D,203,function(D,n,X,l,A,b,J){Y(D,1)||(n=e(D),A=n.W,l=n.M,X=n.s,J=X.length,0==J?b=new l[A]:1==J?b=new l[A](X[0]):2==J?b=new l[A](X[0],X[1]):3==J?b=new l[A](X[0],X[1],X[2]):4==J?b=new l[A](X[0],X[1],X[2],X[3]):I(D,22),w(D,n.X,b),Y(D,0))}),w(D,222,[]),w)(D,54,D),w(D,115,function(D,n,X){n=(n=g(D),X=g(D),D.N[n]&&D.R(n)),w(D,X,n)}),w)(D,86,function(D,n,X,l,A){for(n=g(D),X=C(D),A=0,l=[];A<X;A++)l.push(g(D));w(D,n,l)}),w)(D,21,0),X.Y)||function(){},w)(D,170,function(){}),w(D,212,function(D,n,X){Y(D,1)||(n=g(D),X=g(D),w(D,X,function(D){return eval(D)}(D.R(n))),Y(D,0))}),D.S=[],w(D,163,function(D,n){Y(D,1)||(n=e(D),w(D,n.X,n.W.apply(n.M,n.s)),Y(D,0))}),w(D,43,function(D){D.D(4)}),w)(D,55,0),w(D,217,function(D,n,X,l,A,b,J,a,T,k){if(l=(X=(n=g(D),C(D)),""),void 0!=D.N[224])for(A=D.R(224),J=A.length,b=0;X--;)b=(b+C(D))%J,l+=A[b];else{for(l=(A=0,[]);A<X;A++)l.push(g(D));for(b=A=(X=[],0);A<l.length;)J=l[A++],128>J?X[b++]=String.fromCharCode(J):191<J&&224>J?(a=l[A++],X[b++]=String.fromCharCode((J&31)<<6|a&63)):239<J&&365>J?(a=l[A++],T=l[A++],k=l[A++],J=((J&7)<<18|(a&63)<<12|(T&63)<<6|k&63)-65536,X[b++]=String.fromCharCode(55296+(J>>10)),X[b++]=String.fromCharCode(56320+(J&1023))):(a=l[A++],T=l[A++],X[b++]=String.fromCharCode((J&15)<<12|(a&63)<<6|T&63));l=X.join("")}w(D,n,l)}),w)(D,210,function(D){S(D,1)}),w)(D,18,function(D,n,X){(X=(n=g(D),g(D)),w)(D,X,D.R(X)+D.R(n))}),w(D,74,74),w(D,215,function(D,n){(D=(n=g(D),D).R(n),D[0]).removeEventListener(D[1],D[2],false)}),w)(D,187,function(D,n,X,l){l=(X=(n=g(D),g(D)),g)(D),w(D,l,D.R(n)>>X)}),w)(D,76,0),D.K=[],w(D,142,p(4)),w(D,129,function(D,n,X,l,A){l=(X=(n=(l=(n=g(D),X=g(D),g)(D),D.R(n)),A=D.R(g(D)),D).R(X),D.R(l)),0!==n&&(l=V(D,l,A,1,n,X),n.addEventListener(X,l,q),w(D,55,[n,X,l]))}),w)(D,56,function(D,n,X){(X=(n=g(D),g(D)),n=D.R(n),w)(D,X,m(n))}),w)(D,165,function(D,n,X,l){(l=(X=(n=g(D),g)(D),g(D)),D.R(n)==D.R(X))&&w(D,l,D.R(l)+1)}),w)(D,96,0),w)(D,34,function(D,n){(n=D.R(g(D)),E)(D,n)}),w(D,80,function(D,n,X){0!=(X=(n=g(D),g)(D),D.R(n))&&w(D,31,D.R(X))}),w(D,162,{}),w)(D,229,function(D,n,X,l){if(n=D.K.pop()){for(X=g(D);0<X;X--)l=g(D),n[l]=D.N[l];n[222]=D.N[222],n[4]=D.N[4],D.N=n}else w(D,31,D.a.length)}),w(D,137,function(D){H(D,1)}),w(D,174,function(D,n,X,l,A){for(n=[],X=g(D),l=0;l<X;l++)A=g(D),n.push(D.R(A));X=g(D),w(D,X,function(D,X){D.v++;try{for(X=0;X<n.length;X++)(0,n[X])(D)}finally{D.v--}})}),w(D,103,function(D){D.i&&K(D,0)}),w(D,127,function(D){H(D,2)}),w)(D,245,function(D,n,X,l){(l=(n=g(D),X=g(D),g(D)),w)(D,l,D.R(n)||D.R(X))}),n&&"!"==n.charAt(0))?(D.Z=n,l()):(X=!!X.Y,D.i=X,D.a=[],G(D,[4,n]),G(D,[5,l]),v(D,false,X,true))},t=function(D,n,X,l,Z,r,M,B,A){D.v++;try{for(X=(l=5001,M=(r=void 0,0),Z=20,D.a.length);(--l||D.H)&&(M=D.R(31))<X;)try{w(D,95,M),B=g(D),(r=D.R(B))&&r.call?r(D):I(D,21,0,B),0>Z--&&(Y(D,0),Z=20)}catch(b){b!=D.F&&(A=D.R(74),74!=A?(w(D,A,b),w(D,74,74)):I(D,22,b))}l||I(D,33)}catch(b){try{I(D,22,b)}catch(J){O(D,J)}}return X=D.R(162),n&&w(D,31,n),D.v--,X},W=function(D,n,X,l,Z){for(;D.S.length;){if(X&&n&&d(D)){Z=D,D.j(function(){v(Z,false,n,false)});break}l=(l=(X=true,D.S.pop()),h(D,l))}return l},w=function(D,n,X){if(31==n||95==n)if(D.N[n])D.N[n][D.B](X);else D.N[n]=D.P(X);else if(97!=n&&142!=n&&235!=n&&222!=n||!D.N[n])D.N[n]=D.I(X,D.R);21==n&&(D.g=void 0,w(D,31,D.R(31)+4))},S=function(D,n,X,l){(l=(X=g(D),g(D)),c)(D,l,y(D.R(X),n))},e=function(D,n,X,l,Z,r){for(r=(Z=(X=(n={},g)(D),n.X=g(D),n.s=[],l=g(D)-1,g(D)),0);r<l;r++)n.s.push(g(D));for(n.W=D.R(X),n.M=D.R(Z);l--;)n.s[l]=D.R(n.s[l]);return n},O=function(D,n){D.Z=("E:"+n.message+":"+n.stack).slice(0,2048)},g=function(D,n,X){if(n=D.R(31),!(n in D.a))throw I(D,31),D.F;return((void 0==D.g&&(D.g=f(D.a,n-4),D.U=void 0),D).U!=n>>3&&(D.U=n>>3,X=[0,0,0,D.R(21)],D.u=P(D.g,D.U,X)),w)(D,31,n+1),D.a[n]^D.u[n%8]},I=function(D,n,X,l,Z){(X=(l=((Z=D.R(95),n=[n,Z>>8&255,Z&255],void 0!=l&&n.push(l),0)==D.R(222).length&&(D.N[222]=void 0,w(D,222,n)),""),X&&(X.message&&(l+=X.message),X.stack&&(l+=":"+X.stack)),D).R(4),3<X)&&(l=l.slice(0,X-3),X-=l.length+3,l=F(l.replace(/\\r\\n/g,"\\n")),c(D,142,y(l.length,2).concat(l),12)),w(D,4,X)},Q=function(D,n){try{N(this,D,n)}catch(X){O(this,X)}},C=(((((Q.prototype.G=function(D,n,X,l,Z){if(4==(n=D[0],n)){D=D[1];try{for(l=n=(X=atob(D),D=[],0);l<X.length;l++){for(Z=X.charCodeAt(l);255<Z;)D[n++]=Z&255,Z>>=8;D[n++]=Z}this.a=D}catch(r){I(this,17,r)}t(this)}else if(1==n)X=D[2],Z=D[1],X.push(this.R(97).length,this.R(142).length,this.R(235).length,this.R(4)),this.i=Z,w(this,162,D[3]),this.N[247]&&x(this,this.R(247));else{if(2==n){if(D=((Z=(((n=(Z=((D=y((X=D[2],this.R(97).length+2),2),Z=this.R(222),0<Z.length)&&c(this,97,y(Z.length,2).concat(Z),15),this.R(76))&511,Z-=this.R(97).length+5,this).R(142),4)<n.length&&(Z-=n.length+3),0<Z)&&c(this,97,y(Z,2).concat(p(Z)),10),4<n.length&&c(this,97,y(n.length,2).concat(n),153),p(2).concat(this.R(97))),Z[1]=Z[0]^3,Z[3]=Z[1]^D[0],Z)[4]=Z[1]^D[1],window).btoa){for(l=0,n="";l<Z.length;l+=8192)n+=String.fromCharCode.apply(null,Z.slice(l,l+8192));D=D(n).replace(/\\+/g,"-").replace(/\\//g,"_").replace(/=/g,"")}else D=void 0;if(D)D="!"+D;else for(n=0,D="";n<Z.length;n++)l=Z[n][this.B](16),1==l.length&&(l="0"+l),D+=l;return((this.R(97).length=X[0],this.R(142).length=X[1],this.R(235)).length=X[2],Z=D,w)(this,4,X[3]),Z}if(3==n)x(this,D[1]);else if(6==n)return x(this,D[1])}},Q.prototype).f="caller",Q.prototype).C=(window.performance||{}).now?function(){return window.performance.now()|0}:function(){return+new Date},Q.prototype).B="toString",Q).prototype.j=L.requestIdleCallback?function(D){requestIdleCallback(D,{timeout:4})}:L.setImmediate?function(D){setImmediate(D)}:function(D){setTimeout(D,0)},function(D,n){return(n=g(D),n&128)&&(n=n&127|g(D)<<7),n}),v=(Q.prototype.o=function(D,n,X,l){try{l=D[(n+2)%3],D[n]=D[n]-D[(n+1)%3]-l^(1==n?l<<X:l>>>X)}catch(Z){throw Z;}},function(D,n,X,l,Z,r){if(0==D.S.length)return r;if(Z=0==D.v)D.l=D.C();return(r=W(D,X,l),Z)&&(X=D.C()-D.l,X<(n?10:0)||0>=D.O--||D.A.push(254>=X?X:254)),r}),K=(Q.prototype.D=function(D,n,X,l){(((l=(X=(D&=(n=D&4,3),g)(this),g(this)),X=this.R(X),n)&&(X=F((""+X).replace(/\\r\\n/g,"\\n"))),D)&&c(this,l,y(X.length,2)),c)(this,l,X)},function(D,n){((n=D.R(31)-n,w)(D,31,D.a.length),D).S.push([3,n])}),E=((Q.prototype.b=35,Q).prototype.zS=function(D,n,X,l,Z,r){for(r=l=(X=[],0);r<D.length;r++)for(Z=Z<<n|D[r],l+=n;7<l;)l-=8,X.push(Z>>l&255);return X},function(D,n){(D.K.push(D.N.slice()),D).N[31]=void 0,w(D,31,n)}),c=function(D,n,X,l,Z,r){for((Z=D.R(n),142==n?(n=function(D,n,X,l){if((X=(n=Z.length,n)-4>>3,Z.V)!=X){X=((l=(Z.V=X,[0,0,0,r]),X)<<3)-4;try{Z.$=P(f(Z,X),f(Z,X+4),l)}catch(J){throw J;}}Z.push(Z.$[n&7]^D)},r=D.R(96)):n=function(D){Z.push(D)},l)&&n(l&255),l=0,D=X.length;l<D;l++)n(X[l])},q=false,H=function(D,n,X,l){for(X=g(D),l=0;0<n;n--)l=l<<8|g(D);w(D,X,l)},f=function(D,n){return D[n]<<24|D[n+1]<<16|D[n+2]<<8|D[n+3]},x=(Q.prototype.T=function(D,n,X,l,Z,r){if(this.Z)return this.Z;try{Z=[],r=[],l=!!D,G(this,[1,l,Z,n]),G(this,[2,D,Z,r]),v(this,false,l,true),X=r[0]}catch(M){O(this,M),X=this.Z,D&&D(X)}return X},function(D,n,X){return((X=D.R(31),D.a&&X<D.a.length)?(w(D,31,D.a.length),E(D,n)):w(D,31,n),t)(D,X)}),V=function(D,n,X,l,Z,r){return function(){var M,B=l&1,A=[6,n,X,void 0,Z,r,arguments];return l&2?(G(D,A),M=v(D,true,false,false)):B&&D.S.length?G(D,A):B?(G(D,A),v(D,true,false,false)):M=h(D,A),M}},Y=(((Q.prototype.Nd=function(D,n,X,l){for(;X--;)31!=X&&95!=X&&n.N[X]&&(n.N[X]=n[l](n[D](X),this));n[D]=this},Q).prototype.h=36,Q.prototype).w=function(D,n,X){return(n=(n^=n<<13,n^=n>>17,(n^n<<5)&X))||(n=1),D^n},function(D,n){if(0>=D.J||1<D.v||D.C()-D.l<D.J)return false;return D.L=true,K(D,n),true}),d=(Q.prototype.H=false,function(D){if(D.J){if(!D.L)return false;D.L=false}else if(10>D.C()-D.l)return false;return 0!=document.hidden?false:true});(((Q.prototype.Ro=function(D,n,X,l,Z){for(Z=l=0;Z<D.length;Z++)l+=D.charCodeAt(Z),l+=l<<10,l^=l>>6;return(l=(D=(l+=l<<3,l^=l>>11,l)+(l<<15)>>>0,new Number(D&(1<<n)-1)),l)[0]=(D>>>n)%X,l},Q.prototype).R=function(D,n){if(void 0===(n=this.N[D],n))throw I(this,30,0,D),this.F;return n()},Q.prototype).m=function(D,n,X){if(3==D.length){for(X=0;3>X;X++)n[X]+=D[X];for(D=[13,8,13,12,16,5,3,10,(X=0,15)];9>X;X++)n[3](n,X%3,D[X])}},Q).prototype.F={};try{window.addEventListener("unload",function(){},q),window.addEventListener("test",null,Object.defineProperty({},"passive",{get:function(){q={passive:true}}}))}catch(D){}var U=(L.botguard||(L.botguard={}),L.botguard);(U.BKG=function(D,n,X){(X=new Q(D,{Y:n}),this).invoke=function(D,n,r){return(r=X.T(n&&D,r),D)&&!n&&D(r),r}},U).bg=function(D,n,X){return D&&D.substring&&(X=U[D.substring(0,3)])?new X(D.substring(3),n):new U.BKG(D,n)};')();</script>
+  <script type="text/javascript">
+  document.bg = new botguard.bg('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');
+  </script>
+<script>
+  gaia = window.gaia || {};
+  gaia.ps = gaia.ps || {};
+  gaia.ps.hasPrefilledIdentifier = false;
+  function gaia_parseFragment() {
+  var hash = location.hash;
+  var params = {};
+  if (!hash) {
+  return params;
+  }
+  var paramStrs = decodeURIComponent(hash.substring(1)).split('&');
+  for (var i = 0; i < paramStrs.length; i++) {
+      var param = paramStrs[i].split('=');
+      params[param[0]] = param[1];
+    }
+    return params;
+  }
+
+  function gaia_prefillEmail() {
+    var email = null;
+    var form = null;
+    if (document.getElementById) {
+      email = document.getElementById('Email');
+      form = document.getElementById('gaia_loginform');
+    }
+    if (form && email && (email.value == null || email.value == '')
+        && (email.type != 'hidden')) {
+      hashParams = gaia_parseFragment();
+      if (hashParams['Email'] && hashParams['Email'] != '') {
+        email.value = hashParams['Email'];
+        
+      }
+    }
+  }
+
+  
+  try {
+    gaia_prefillEmail();
+  } catch (e) {
+  }
+  
+</script>
+<script>
+  var gaia_scrollToElement = function(element) {
+  var calculateOffsetHeight = function(element) {
+  var curtop = 0;
+  if (element.offsetParent) {
+  while (element) {
+  curtop += element.offsetTop;
+  element = element.offsetParent;
+  }
+  }
+  return curtop;
+  }
+  var siginOffsetHeight = calculateOffsetHeight(element);
+  var scrollHeight = siginOffsetHeight - window.innerHeight +
+  element.clientHeight + 0.02 * window.innerHeight;
+  window.scroll(0, scrollHeight);
+  }
+</script>
+  <script>
+  if (gaia.ps.hasPrefilledIdentifier) {
+  var form = document.getElementById('gaia_loginform');
+  if (form) {
+  form.submit();
+  }
+  }
+  </script>
+<script>
+  (function(){
+  gaia_onLoginSubmit = function() {
+  try {
+  gaia.loginAutoRedirect.stop();
+  } catch (err) {
+  // do not prevent form from being submitted
+  }
+  try {
+  document.bg.invoke(function(response) {
+  document.getElementById('bgresponse').value = response;
+  });
+  } catch (err) {
+  document.getElementById('bgresponse').value = '';
+  }
+  return true;
+  }
+  document.getElementById('gaia_loginform').onsubmit = gaia_onLoginSubmit;
+  var signinButton;
+  signinButton = document.getElementById('next');
+  gaia_attachEvent(window, 'load', function(){
+  gaia_scrollToElement(signinButton);
+  });
+  })();
+</script>
+  <script>var e=this,g=function(a,c){a=a.split(".");var b=e;a[0]in b||!b.execScript||b.execScript("var "+a[0]);for(var d;a.length&&(d=a.shift());)a.length||void 0===c?b[d]?b=b[d]:b=b[d]={}:b[d]=c};var h=function(){try{return new XMLHttpRequest}catch(b){for(var a=["MSXML2.XMLHTTP.6.0","MSXML2.XMLHTTP.3.0","MSXML2.XMLHTTP","Microsoft.XMLHTTP"],c=0;c<a.length;c++)try{return new ActiveXObject(a[c])}catch(d){}}return null};g("gaia.ajax.newXmlHttpRequest",h);var k=function(){this.a=h();this.parameters={}};g("gaia.ajax.XmlHttpFormRequest",k);
+k.prototype.send=function(a,c){var b=[],d;for(d in this.parameters)b.push(d+"="+encodeURIComponent(this.parameters[d]));var b=b.join("&"),f=this.a;f.open("POST",a,!0);f.setRequestHeader("Content-type","application/x-www-form-urlencoded");f.onreadystatechange=function(){4==f.readyState&&c({status:f.status,text:f.responseText})};f.send(b)};k.prototype.send=k.prototype.send;
+k.prototype.h=function(a,c,b){var d=this.a;d.open("POST",a,!0);d.setRequestHeader("Content-type","application/json");d.onreadystatechange=function(){4==d.readyState&&b({status:d.status,text:d.responseText})};d.send(c)};k.prototype.sendJson=k.prototype.h;k.prototype.get=function(a,c){var b=this.a;b.open("GET",a,!0);b.onreadystatechange=function(){4==b.readyState&&c({status:b.status,text:b.responseText})};b.send()};k.prototype.get=k.prototype.get;var l=/\s*;\s*/,m=function(){if(!document.cookie)return"";for(var a=document.cookie.split(l),c=0;c<a.length;c++){var b=a[c],b=b.replace(/^\s+/,""),b=b.replace(/\s+$/,"");if(0==b.indexOf("APISID="))return b.substr(7)}return""};var n=null,p=function(a,c){this.g=a;this.f=c;this.c=m();this.b=!1},q=function(){var a=n,c=m();c==a.c||a.b||(a.c=c,(new k).get(a.f,function(b){var a=n;b&&b.status&&200==b.status&&"OK"==b.text&&(a.a&&clearInterval(a.a),a.b||(window.location=a.g))}))};p.prototype.start=function(a){if(this.a)return!1;this.a=setInterval(function(){q()},a);return!0};g("gaia.loginAutoRedirect.start",function(a,c,b){if(n||!b||!c||0>=a)return!1;n=new p(c,b);return n.start(a)});
+g("gaia.loginAutoRedirect.stop",function(){var a=n;a.b=!0;a.a&&(clearInterval(a.a),a.a=null)});
+</script>
+  <script type="text/javascript">
+  gaia.loginAutoRedirect.start(5000,
+  'https:\x2F\x2Faccounts.google.com\x2FServiceLogin?continue=https%3A%2F%2Fwww.blogger.com%2Fblogger.g%3FblogID%3D8749391503645026985\x26followup=https%3A%2F%2Fwww.blogger.com%2Fblogger.g%3FblogID%3D8749391503645026985\x26service=blogger\x26ltmpl=start\x26passive=1209600\x26noautologin=true',
+  'https:\x2F\x2Faccounts.google.com\x2FPassiveLoginProber?continue=https%3A%2F%2Fwww.blogger.com%2Fblogger.g%3FblogID%3D8749391503645026985\x26followup=https%3A%2F%2Fwww.blogger.com%2Fblogger.g%3FblogID%3D8749391503645026985\x26service=blogger\x26ltmpl=start\x26passive=1209600');
+  </script>
+  </body>
+</html>
